@@ -6,17 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    {{-- includiamo assets con le direttive @vite  --}}
-    @vite('resources/js/app.js')
+     {{-- includiamo assets con le direttive @vite  --}}
+     @vite('resources/js/app.js')
 
 </head>
 <body>
-    @extends('layouts.app')
-
-    @section('content')
-
-    <h1>Home</h1>
-        
-    @endsection
+    <main>
+        @yield('content')
+    </main>
 </body>
 </html>
