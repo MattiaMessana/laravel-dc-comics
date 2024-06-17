@@ -18,5 +18,10 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        //mi permette di inserire tutti i seeders tramite un unico comando 
+        $this->call([
+            ComicsTableSeeder::class
+        ]);
     }
 }
