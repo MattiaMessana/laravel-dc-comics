@@ -14,7 +14,7 @@
             <li class="mt-3">Serie: {{ $comic->series }}</li>
             <li class="mt-3">Venduto il: {{ $comic->sale_date }}</li>
             <li class="mt-3">Tipologia: {{ $comic->type }}</li>
-            <li class="mt-4"><a class="btn btn-primary" href="{{route('comics.index')}}">Torna alla Lista</a></li>
+            <li class="mt-4"><a class="btn btn-primary" href="{{route('comics.index')}}"><i class="fa-solid fa-arrow-left"></i></a></li>
         </ul>
     </div>
 @endsection

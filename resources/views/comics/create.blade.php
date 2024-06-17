@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h2 class="mt-4">Crea un nuovo fumetto</h2>
-        <a class="btn btn-primary mt-3" href="{{route('comics.index')}}">Torna alla lista</a>
+        <a class="btn btn-primary mt-3" href="{{route('comics.index')}}"><i class="fa-solid fa-arrow-left"></i></a>
         <form class="mt-3" action="{{ route('comics.store') }}" method="POST">
 
             {{-- Cookie per far riconoscere il form al server --}}
