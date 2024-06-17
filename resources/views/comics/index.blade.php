@@ -21,8 +21,9 @@
                         <td>{{$comic->title}}</td>
                         <td><img class="w-50" src="{{$comic->thumb}}" alt=""></td>
                         <td>{{$comic->price}}</td>
-                        <td>
+                        <td class="d-flex justify-content-center gap-2">
                             <a class="btn btn-primary" href="{{route('comics.show', ['comic' => $comic->id])}}">Dettagli</a>
+                            <a class="btn btn-warning" href="{{ route('comics.edit', ['comic' => $comic->id])}}">Modifica</a>
                         </td>
                     </tr>
                 @endforeach
