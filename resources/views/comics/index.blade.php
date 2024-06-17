@@ -24,6 +24,11 @@
                         <td class="d-flex justify-content-center gap-2">
                             <a class="btn btn-primary" href="{{route('comics.show', ['comic' => $comic->id])}}">Dettagli</a>
                             <a class="btn btn-warning" href="{{ route('comics.edit', ['comic' => $comic->id])}}">Modifica</a>
+                            <form action="{{route('comics.destroy', ['comic' => $comic->id])}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
