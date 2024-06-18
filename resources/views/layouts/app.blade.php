@@ -8,6 +8,7 @@
 
      {{-- includiamo assets con le direttive @vite  --}}
      @vite('resources/js/app.js')
+     
 
 </head>
 <body>
