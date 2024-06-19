@@ -36,7 +36,7 @@
                             <form class="delete-form" action="{{route('comics.destroy', ['comic' => $comic->id])}}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button id="sweetAlert" class="btn btn-danger" data-confirm-delete="true"><i class="fa-solid fa-trash"></i></button>
+                                <button data-comic-title="{{ $comic->title }}" id="sweetAlert" class="btn btn-danger" data-confirm-delete="true"><i class="fa-solid fa-trash"></i></button>
                             </form>
                         </td>
                     </tr>
@@ -44,4 +44,7 @@
             </tbody>
         </table>
     </div>
+
+    @include('partials.delete-comic-modal')
+    
 @endsection
