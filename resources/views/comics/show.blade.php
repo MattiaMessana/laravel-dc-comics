@@ -18,11 +18,7 @@
                 <li class="mt-4"><a class="btn btn-primary" href="{{route('comics.index')}}"><i class="fa-solid fa-arrow-left"></i></a></li>
                 <li class="mt-4"><a class="btn btn-warning" href="{{ route('comics.edit', ['comic' => $comic->id])}}"><i class="fa-solid fa-marker"></i></a></li>
                 <li class="mt-4">
-                    <form class="delete-form" action="{{route('comics.destroy', ['comic' => $comic->id])}}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button id="sweetAlert" class="btn btn-danger" data-confirm-delete="true"><i class="fa-solid fa-trash"></i></button>
-                    </form>
+                    @include('partials.delete-form')
                 </li>
             </ul>
         </ul>
